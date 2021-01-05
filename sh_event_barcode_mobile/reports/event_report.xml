@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- QR Code Registration Badge -->
+    <template id="sh_event_barcode_mobile_sh_event_reg_qr_generator_report_badge" inherit_id="sh_event_reg_qr_generator.sh_event_reg_qr_generator_event_reg_report_tmpl_badge">
+		
+		        <xpath expr="//div[@id='sh_er_qr_code_img']" position="attributes">
+        			<attribute name="t-if">o.company_id.sh_event_barcode_mobile_type in ['sh_er_qr_code','both']</attribute>
+		        </xpath>
+
+
+    </template>
+
+    <!-- Barcode Registration Badge -->
+    <template id="sh_event_barcode_mobile_sh_event_reg_barcode_generator_report_badge" inherit_id="sh_event_reg_barcode_generator.sh_event_reg_barcode_generator_event_reg_report_tmpl_badge">
+
+		        <xpath expr="//div[@id='sh_ebs_barcode_img']" position="attributes">
+        			<attribute name="t-if">o.company_id.sh_event_barcode_mobile_type in ['sh_ebs_barcode','both']</attribute>
+		        </xpath>
+
+
+    </template>   
+    
+
+
+</odoo>
+    
