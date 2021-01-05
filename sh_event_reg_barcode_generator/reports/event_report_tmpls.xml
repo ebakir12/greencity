@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- template use to render a Registration Badge -->
+    <template id="sh_event_reg_barcode_generator_event_reg_report_tmpl_badge" inherit_id="event.event_registration_report_template_badge">
+        <xpath expr="//div[hasclass('col-6')][1]" position="inside">
+        
+              <div class="col-12 text-center mt-2" id="sh_ebs_barcode_img">
+
+  					<img alt="Barcode" t-if="len(o.sh_ebs_barcode or '') == 13" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', o.sh_ebs_barcode, 600, 150)" style="width:100%;height:20%;"/>
+                   			
+              </div>        
+        
+        </xpath> 
+        
+
+    </template>
+
+</odoo>
+    
